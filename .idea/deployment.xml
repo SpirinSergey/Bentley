@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="Bentley" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Bentley">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/www/testdevelopment.site/Bentley/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

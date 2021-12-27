@@ -1,0 +1,81 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}<title>Bentley - Home</title>{% endblock %}
+{% block activ-home %}active{% endblock %}
+
+{% block content %}
+    <section style="box-sizing: border-box; width: 100%; padding-bottom: 0;">
+        <div class="block-style align-items-center w-100 mx-0" >
+            <div class="col-lg-6">
+                <div class="container text-center">
+                    <h1 class="display-4 text-uppercase mb-4">Bentley Residences</h1>
+                    <p class="fs-4 about-text text-uppercase mb-0">Introducing the Tallest Beachfront Luxury Tower in the U.S.</p>
+                </div>
+            </div>
+            <div class="col-lg px-0">
+                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-11.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section style="box-sizing: border-box; width: 100%">
+        <div class=" block-style align-items-center w-100 mx-0">
+            <div class="col-lg px-0">
+                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-2.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="container text-center">
+                    <h1 class="display-4 text-uppercase mb-4">Bentley Residences</h1>
+                    <p class="fs-4 about-text text-uppercase mb-3">Introducing the Tallest Beachfront Luxury Tower in the U.S.</p>
+                    <a href="{% url 'about' %}"><button class="my-but">Learn more</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="text-center">
+            <h1 class="display-5 text-uppercase mb-3">Amenities</h1>
+            <p class="fs-4 about-text text-uppercase">We have prepared all possible amenities for your pleasure.</p>
+        </div>
+        <div class="">
+            <div class="row mx-0 ">
+                <div class="col-lg-3 px-0">
+                    <img class="home-amen" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-3 px-0">
+                    <img class="home-amen" src="{% static 'main/img/home-amen-2.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-3 px-0">
+                    <img class="home-amen" src="{% static 'main/img/home-amen-3.jpg' %}" alt="">
+                </div>
+                <div class="col-lg-3 px-0">
+                    <img class="home-amen" src="{% static 'main/img/home-amen-4.jpg' %}" alt="">
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase"><button class="my-but">Inside</button></a>
+            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase"><button class="my-but-2">Outside</button></a>
+        </div>
+    </section>
+
+
+    <section style="box-sizing: border-box; width: 100%">
+        <div class=" block-style align-items-center w-100 mx-0">
+            <div class="col-lg-6">
+                <div class="container text-center">
+                    <h1 class="display-4 text-uppercase mb-4">Bentley Residences</h1>
+                    <p class="fs-4 about-text text-uppercase mb-3">Introducing the Tallest Beachfront Luxury Tower in the U.S.</p>
+                    <a href="{% url 'listings' %}"><button class="my-but">Show listings</button></a>
+                </div>
+            </div>
+            <div class="col-lg px-0">
+                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-1.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
