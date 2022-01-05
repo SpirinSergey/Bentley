@@ -18,6 +18,14 @@ def developers(request):
     return render(request, 'main/developers.html')
 
 
+def inside(request):
+    return render(request, 'main/inside.html')
+
+
+def outside(request):
+    return render(request, 'main/outside.html')
+
+
 def gallery(request):
     gal_img = Gallery.objects.all()
     return render(request, 'main/gallery.html', context={'gal_img': gal_img})

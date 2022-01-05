@@ -1,35 +1,69 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 
-{% block title %}<title>Bentley - Home</title>{% endblock %}
+{% block title %}<title>Bentley Residences</title>{% endblock %}
 {% block activ-home %}active{% endblock %}
 
 {% block content %}
+    <section style="padding-bottom: 0">
+            <div class="image-style" style="background-image:url('/static/main/img/home-11.jpg'); height: 100vh;">
+                <div class="row col-lg-5 mx-5" style="position: relative; float: right; margin-top: 9%">
+                    <h1 class="display-5 text-uppercase mb-3">LIFT TO EXTRAORDINARY HEIGHTS.</h1>
+                    <p class="fs-4 mb-3">Introducing the Bentley Residences - the first
+                        residential offering by one of the world’s most revered brands. Experience a collection of
+                        enriching homes in the tallest residential tower on the US coastline - designed to a level of
+                        finish and craftsmanship that has defined the Bentley marque for over a century.</p>
+                    <p class="fs-4 mb-3">Your journey starts at home.</p>
+                    <p class="fs-4 mb-3">COMING 2026</p>
+                    <a href="{% url 'about' %}"><button class="my-but">STAY INFORMED</button></a>
+                </div>
+            </div>
+    </section>
+
+    <section class="row mx-0">
+        <div class="text-center container" style="background-color: #e6eae9; height: auto;">
+            <div class="container">
+                <div class="col-lg-6 mt-2 mx-3 mb-0">
+                    <h4 class="display-5">The World’s First Bentley-Branded Luxury Residential</h4>
+                </div>
+                <div class="col-lg-6 mx-3" style="float: right">
+                    <h4 class="display-5">Rising High In Sunny Isles Beach.</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="row w-100 mx-0">
+        <div class="text-center container col-lg-8">
+            <h4 class="fs-2">Standing at 749 feet and over 60 stories high, Bentley Residences will be the tallest residential tower on a U.S. beachfront.</h4>
+        </div>
+    </section>
+
     <section style="box-sizing: border-box; width: 100%; padding-bottom: 0;">
-        <div class="block-style align-items-center w-100 mx-0" >
-            <div class="col-lg-6">
+        <div class="row w-100 align-items-center mx-0" >
+            <div class="col-lg-6 info">
                 <div class="container text-center">
                     <h1 class="display-4 text-uppercase mb-4">Bentley Residences</h1>
                     <p class="fs-4 about-text text-uppercase mb-0">Introducing the Tallest Beachfront Luxury Tower in the U.S.</p>
                 </div>
             </div>
             <div class="col-lg px-0">
-                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-11.jpg' %}" alt="">
+                <img class="image-style" src="{% static 'main/img/home-11.jpg' %}" alt="">
             </div>
         </div>
     </section>
 
     <section style="box-sizing: border-box; width: 100%">
-        <div class=" block-style align-items-center w-100 mx-0">
+        <div class="row w-100 align-items-center mx-0">
             <div class="col-lg px-0">
-                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-2.jpg' %}" alt="">
+                <img class="image-style" src="{% static 'main/img/home-2.jpg' %}" alt="">
             </div>
             <div class="col-lg-6">
                 <div class="container text-center">
                     <h1 class="display-4 text-uppercase mb-4">An Imposing Sight At Miami's Sunny Isles Beach Coastline</h1>
                     <p class="fs-4 about-text text-uppercase mb-3">An incredible location. Featuring unique ocean and
                         bayside views from every apartment, bringing the beauty of the outdoors into each new home.</p>
-                    <a href="{% url 'about' %}"><button class="my-but">Learn more</button></a>
+                    <a href="{% url 'about' %}"><button class="my-but text-uppercase">Learn more</button></a>
                 </div>
             </div>
         </div>
@@ -41,7 +75,7 @@
             <p class="fs-4 about-text text-uppercase">We have prepared all possible amenities for your pleasure.</p>
         </div>
         <div class="">
-            <div class="row mx-0 ">
+            <div class="row mx-0">
                 <div class="col-lg-3 px-0">
                     <img class="home-amen" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
                 </div>
@@ -58,19 +92,19 @@
         </div>
         <br>
         <div class="text-center">
-            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase"><button class="my-but">Inside</button></a>
-            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase"><button class="my-but-2">Outside</button></a>
+            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase"><button class="my-but text-uppercase">Inside</button></a>
+            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase"><button class="my-but-2 text-uppercase">Outside</button></a>
         </div>
     </section>
 
 
     <section style="box-sizing: border-box; width: 100%">
-        <div class=" block-style align-items-center w-100 mx-0">
+        <div class="row w-100 align-items-center mx-0">
             <div class="col-lg-6">
                 <div class="container text-center">
                     <h1 class="display-4 text-uppercase mb-4">Inspiring, Powerful, And Iconic.</h1>
                     <p class="fs-4 about-text text-uppercase mb-3">A true game-changer, combining luxury living and a sustainable environment.</p>
-                    <a href="{% url 'listings' %}"><button class="my-but">Show listings</button></a>
+                    <a href="{% url 'listings' %}"><button class="my-but text-uppercase">Show Listings</button></a>
                 </div>
             </div>
             <div class="col-lg px-0">

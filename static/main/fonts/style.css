@@ -23,5 +23,14 @@ p {
 }
 
 .my-font {
-    color: #5B5B5B;
+    font-family: "Bentley Residence Light", sans-serif;!important;
+    color: #335b4c;
+}
+
+.my-font:hover {
+    color: #00311e;
+}
+
+.my-font:active {
+    color: #335b4c;
 }

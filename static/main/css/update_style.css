@@ -1,14 +1,20 @@
 /*index*/
 .image-style {
-    background-size: cover;
+    height: 100vh;
     width: 100%;
-    background-position: center;
+    background-size: cover;
+    background-position: center center;
 }
 
 .block-style {
     display: flex;
     width: 100%;
     padding-bottom: 0;
+}
+
+.start-img {
+    height: 100vh;
+    width: 100%;
 }
 
 .my-but {
@@ -24,10 +30,11 @@
     cursor: pointer;
 }
 
-
 .my-but:hover {
     border: 3px solid #00311e;
     background-color: #00311e;
+    color: white;!important;
+    transition-duration: 1s;
 }
 
 .my-but:active {
@@ -54,6 +61,7 @@
     border: 3px solid #00311e;
     background-color: #00311e;
     color: white;
+    transition-duration: 1s;
 }
 
 .my-but-2:active {
@@ -61,6 +69,16 @@
     border: 3px solid #335b4c;
     color: #335b4c;
 }
+
+/*иконки*/
+
+.whatsapp:hover, .facebook:hover,
+.instagram:hover, .telegram:hover {
+    fill: #00311e;
+    transition-duration: 1s;
+}
+
+
 
 .block-style-img{
     height: 230px;

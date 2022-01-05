@@ -15,5 +15,3 @@ class Listing(models.Model):
     TOTAL = models.CharField(null=True, max_length=25)
     PRICE = models.CharField(null=True, max_length=25)
     FLOOR_PLANE = models.FileField(upload_to='floor_plane/', blank=True,)
-
-
