@@ -1,29 +1,41 @@
 @font-face {
     font-family: "Bentley Residence Bold";
-    url('Bentley-Bold.woff2') format('woff2'),
-    font-style: normal;
+url('Bentley-Bold.woff2') format('woff2'), font-style: normal;
     font-weight: bold;
 }
 
 @font-face {
     font-family: "Bentley Residence Light";
-    url('Bentley-Light.woff2') format('woff2'),
-    font-style: normal;
+url('Bentley-Light.woff2') format('woff2'), font-style: normal;
     font-weight: normal;
 }
 
-h1, h2, h3, h4, a  {
-    font-family: "Bentley Residence Bold", sans-serif;!important;
-    color: #00311e;
+h1, h2, h3, h4, a {
+    font-family: "Bentley Residence Bold", sans-serif;
+!important;
+    color: #333333;
+    /*color: #00311e;*/
 }
 
 p {
-    font-family: "Bentley Residence Light", sans-serif;!important;
+    font-family: "Bentley Residence Light", sans-serif;
+!important;
+    color: #727376;
+    /*color: #335b4c;*/
+}
+
+.my-font-h {
+    color: #00311e;
+}
+
+.my-font-p {
     color: #335b4c;
 }
 
+
 .my-font {
-    font-family: "Bentley Residence Light", sans-serif;!important;
+    font-family: "Bentley Residence Light", sans-serif;
+!important;
     color: #335b4c;
 }
 

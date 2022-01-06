@@ -10,7 +10,6 @@
 {# Display django.contrib.messages as Bootstrap alerts #}
 {% bootstrap_messages %}
 
-
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
@@ -33,24 +32,31 @@
             <img style="height: 50px" src="{% static 'main/img/bentley_logo.png' %}" alt="">
         </a>
         <button class="navbar-toggler btn-mobile-nav" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link {% block activ-home %}{% endblock %}" href="{% url 'index' %}">HOME</a></li>
-                <li class="nav-item"><a class="nav-link {% block activ-about %}{% endblock %}" href="{% url 'about' %}">ABOUT</a></li>
-                <li class="nav-item"><a class="nav-link {% block activ-developers %}{% endblock %}" href="{% url 'developers' %}">DEVELOPERS</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-home %}{% endblock %}" href="{% url 'index' %}">HOME</a>
+                </li>
+                <li class="nav-item"><a class="nav-link {% block activ-about %}{% endblock %}" href="{% url 'about' %}">ABOUT</a>
+                </li>
+                <li class="nav-item"><a class="nav-link {% block activ-developers %}{% endblock %}"
+                                        href="{% url 'developers' %}">DEVELOPERS</a></li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% block activ-amenities %}{% endblock %}" id="navbarDropdown" href="#" role="button"
+                    <a class="nav-link dropdown-toggle {% block activ-amenities %}{% endblock %}" id="navbarDropdown"
+                       href="#" role="button"
                        data-bs-toggle="dropdown" aria-expanded="false">AMENITIES</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{% url 'inside' %}">indoor</a></li>
                         <li><a class="dropdown-item" href="{% url 'outside' %}">outdoor</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link {% block activ-gallery %}{% endblock %}" href="{% url 'gallery' %}">GALLERY</a></li>
-                <li class="nav-item"><a class="nav-link {% block activ-listings %}{% endblock %}" href="{% url 'listings' %}">AVAILABLE UNITS</a></li>
-                <li class="nav-item"><a class="nav-link {% block activ-contact %}{% endblock %}" href="{% url 'contact' %}">CONTACTS</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-gallery %}{% endblock %}"
+                                        href="{% url 'gallery' %}">GALLERY</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-listings %}{% endblock %}"
+                                        href="{% url 'listings' %}">AVAILABLE UNITS</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-contact %}{% endblock %}"
+                                        href="{% url 'contact' %}">CONTACTS</a></li>
             </ul>
         </div>
     </div>
@@ -70,7 +76,5 @@
         </div>
     </div>
 </footer>
-
-
 
 </body>
