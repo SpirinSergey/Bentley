@@ -13,19 +13,18 @@
 
 <head>
     <meta charset="utf-8">
-    {% block title %}{% endblock %}
+    <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="shortcut icon" type="image/png" href="{% static "main/img/favicon.ico" %}">
 
-    <link rel="stylesheet" href="/static/main/css/update_style.css">
+    <link rel="stylesheet" href="{% static 'main/css/update_style.css' %}">
 
-    <link rel="stylesheet" href="/static/main/css/phone-code.css">
-    <link rel="stylesheet" href="/static/main/css/theme.css">
+    <link rel="stylesheet" href="{% static 'main/css/phone-code.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/theme.css' %}">
 
-{#    <link rel="stylesheet" href="/static/main/fonts/residences/style.css">#}
-    <link rel="stylesheet" href="/static/main/fonts/style.css">
+    <link rel="stylesheet" href="{% static 'main/fonts/style.css' %}">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <link href="{% static 'css/phone-code.css' %}" rel="stylesheet">
+
 </head>
 
 <body>
@@ -189,7 +188,6 @@
             </div>
         </div>
 
-
         <div class="footer-info">
             <div class="container text-center">
                 <p class="mb-3">© 2021 Bentley, INC</p>
@@ -198,4 +196,18 @@
             </div>
         </div>
     </footer>
+
+
+    <link rel="stylesheet" href="{% static 'main/js/vendor.bundle.js' %}">
+    <link rel="stylesheet" href="{% static 'main/js/index.bundle.js' %}">
+
+
+    <script>
+        $(window).on('load',function(){
+            $('#messagesuccess').modal('show');
+        });
+    </script>
+
+    <script src="{% static 'main/js/phone-code.js' %}"></script>
+
 </body>
