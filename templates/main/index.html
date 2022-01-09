@@ -5,9 +5,11 @@
 {% block activ-home %}active{% endblock %}
 
 {% block content %}
-    <section style="padding-bottom: 0">
-        <div class="image-style img-fluid" style="background-image:url('/static/main/img/home-11.jpg'); height: 92vh;">
-            <div class="row col-lg-5 mx-4" style="position: relative; float: right; margin-top: 17%">
+    <section class="container-fluid st-cl">
+        <div class="row">
+            <div class="col-lg-7"></div>
+            <div class="col-lg-5 st-mn">
+                <div class="container">
                 <h1 class="display-5 text-uppercase mb-3">LIFT TO EXTRAORDINARY HEIGHTS.</h1>
                 <p class="fs-4 mb-3" style="color: #333333;">Introducing the Bentley Residences - the first
                     residential offering by one of the world’s most revered brands.</p>
@@ -15,53 +17,57 @@
                 <a href="{% url 'about' %}">
                     <button class="my-but">STAY INFORMED</button>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="row mx-0">
-        <div class="text-center container" style="background-color: #e6eae9; height: auto;">
-            <div class="container">
-                <div class=" mt-5 mb-5">
-                    <h4 class="display-5 my-font-h">The World’s First Bentley-Branded Luxury Residential</h4>
-
                 </div>
-
             </div>
-
-        </div>
-    </section>
-    <section class="row w-100 mx-0">
-        <div class="text-center container col-lg-8">
-            <h4 class="fs-2">Standing at 749 feet and over 60 stories high, Bentley Residences will be the tallest
-                residential tower on a U.S. beachfront.</h4>
         </div>
     </section>
 
-    <section style="box-sizing: border-box; width: 100%; padding-bottom: 0;">
-        <div class="row w-100 align-items-center mx-0">
-            <div class="col-lg-6 info">
+    <section class="container-fluid mx-0">
+        <div class="row">
+            <div class="text-center container" style="background-color: #e6eae9; height: auto;">
+                <div class="container">
+                    <div class=" mt-5 mb-5">
+                        <h4 class="display-5 my-font-h">The World’s First Bentley-Branded Luxury Residential</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid mx-0">
+        <div class="row">
+            <div class="text-center container col-lg-8">
+                <h4 class="fs-2">Standing at 749 feet and over 60 stories high, Bentley Residences will be the tallest
+                    residential tower on a U.S. beachfront.</h4>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container-fluid mx-0" style="padding-bottom: 0;">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
                 <div class="container text-center">
-                    <h1 class="display-4 text-uppercase mb-4">Bentley Residences</h1>
+                    <h2 class="display-4 text-uppercase mb-4">Bentley Residences</h2>
                     <p class="fs-4 about-text text-uppercase mb-0">Introducing the Tallest Beachfront Luxury Tower in
                         the U.S.</p>
                 </div>
             </div>
-            <div class="col-lg px-0">
-                <img class="image-style" src="{% static 'main/img/home-11.jpg' %}" alt="">
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
             </div>
         </div>
     </section>
 
-    <section style="box-sizing: border-box; width: 100%">
-        <div class="row w-100 align-items-center mx-0">
-            <div class="col-lg px-0">
-                <img class="image-style" src="{% static 'main/img/home-2.jpg' %}" alt="">
+    <section class="container-fluid mx-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
             </div>
             <div class="col-lg-6">
                 <div class="container text-center">
-                    <h1 class="display-4 text-uppercase mb-4">An Imposing Sight At Miami's Sunny Isles Beach
-                        Coastline</h1>
+                    <h2 class="display-4 text-uppercase mb-4">An Imposing Sight At Miami's Sunny Isles Beach
+                        Coastline</h2>
                     <p class="fs-4 about-text text-uppercase mb-3">An incredible location. Featuring unique ocean and
                         bayside views from every apartment, bringing the beauty of the outdoors into each new home.</p>
                     <a href="{% url 'about' %}">
@@ -72,43 +78,48 @@
         </div>
     </section>
 
-    <section>
-        <div class="text-center">
-            <h1 class="display-5 text-uppercase mb-3">Amenities</h1>
-            <p class="fs-4 about-text text-uppercase">We have prepared all possible amenities for your pleasure.</p>
-        </div>
-        <div class="">
-            <div class="row mx-0">
-                <div class="col-lg-3 px-0">
-                    <img class="home-amen" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
-                </div>
-                <div class="col-lg-3 px-0">
-                    <img class="home-amen" src="{% static 'main/img/home-amen-2.jpg' %}" alt="">
-                </div>
-                <div class="col-lg-3 px-0">
-                    <img class="home-amen" src="{% static 'main/img/home-amen-3.jpg' %}" alt="">
-                </div>
-                <div class="col-lg-3 px-0">
-                    <img class="home-amen" src="{% static 'main/img/home-amen-4.jpg' %}" alt="">
-                </div>
+    <section class="container-fluid mx-0" style="padding-bottom: 0;">
+        <div class="row">
+            <div class="text-center">
+                <h1 class="display-5 text-uppercase mb-3">Amenities</h1>
+                <p class="fs-4 about-text text-uppercase">We have prepared all possible amenities for your pleasure.</p>
             </div>
         </div>
-        <br>
+    </section>
+
+    <section class="container-fluid" style="padding-bottom: 20px;">
+        <div class="row">
+            <div class="col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/home-amen-2.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/home-amen-3.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-3 px-0">
+                <img class="home-amen" src="{% static 'main/img/home-amen-4.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid">
         <div class="text-center">
-            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase">
+            <a href="{% url 'inside' %}" class="fs-5 double-border-button" style="text-decoration: none">
                 <button class="my-but text-uppercase">Inside</button>
             </a>
-            <a href="{% url 'about' %}" class="fs-5 double-border-button text-dark text-uppercase">
+            <a href="{% url 'outside' %}" class="fs-5 double-border-button">
                 <button class="my-but-2 text-uppercase">Outside</button>
             </a>
         </div>
     </section>
 
 
-    <section style="box-sizing: border-box; width: 100%">
-        <div class="row w-100 align-items-center mx-0">
+    <section class="container-fluid mx-0">
+        <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="container text-center">
+                <div class="container text-center mb-3">
                     <h1 class="display-4 text-uppercase mb-4">Inspiring, Powerful, And Iconic.</h1>
                     <p class="fs-4 about-text text-uppercase mb-3">A true game-changer, combining luxury living and a
                         sustainable environment.</p>
@@ -117,8 +128,8 @@
                     </a>
                 </div>
             </div>
-            <div class="col-lg px-0">
-                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-1.jpg' %}" alt="">
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
             </div>
         </div>
     </section>

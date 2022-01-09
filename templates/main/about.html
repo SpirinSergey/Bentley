@@ -5,42 +5,46 @@
 {% block activ-about %}active{% endblock %}
 
 {% block content %}
-    <section style="box-sizing: border-box; width: 100%; padding-bottom: 0">
-        <div class="block-style align-items-center w-100 mx-0">
+
+    <section class="container-fluid mx-0" style="padding-bottom: 0;">
+        <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="container text-center">
-                    <h1 class="display-4 text-uppercase mb-4">An Imposing Sight At Miami's Sunny Isles Beach
-                        Coastline</h1>
-                    <p class="fs-4 about-text text-uppercase mb-0">An incredible location. Featuring unique ocean and
-                        bayside views from every apartment, bringing the beauty of the outdoors into each new home.</p>
+                    <h2 class="display-4 text-uppercase mb-4">EXCEPTIONAL HEIGHTS WITH BENTLEY</h2>
+                    <p class="fs-4 about-text text-uppercase mb-0">New heights are conquered by the British automobile
+                        company Bentley, one of the world's most revered luxury car manufacturers! </p>
                 </div>
             </div>
-            <div class="col-lg px-0">
-                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
             </div>
         </div>
     </section>
 
-
-
-    <section style="background-color: #e6eae9; height: auto;">
+    <section class="container-fluid mx-0" style="padding-bottom: 0;">
         <div class="row">
-            <div class="container text-center col-lg-9 mt-5">
-                <h1 class="display-4 text-uppercase mb-4 my-font-h">Inspiring, Powerful, And Iconic.</h1>
-                <p class="fs-4 about-text text-uppercase mb-0 my-font-p">A true game-changer, combining luxury living
-                    and a sustainable environment.</p>
+            <div class="text-center container" style="background-color: #e6eae9; height: auto;">
+                <div class="container">
+                    <div class=" mt-5 mb-5">
+                <h2 class="display-4 text-uppercase mb-4 my-font-h">Sales of residences of the world's first skyscraper
+                    under the company's brand have started in Miami.</h2>
+                <p class="fs-4 about-text text-uppercase mb-0 my-font-p">The Bentley Residences - the cylindrical 230
+                    meters height tower -  is considered to be the tallest residential building on the coast of the USA,
+                    scheduled to be completed in 2026.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section style="box-sizing: border-box; width: 100%; padding-bottom: 0">
-        <div class="block-style align-items-center w-100 mx-0">
-            <div class="col-lg px-0">
-                <img class="image-style" style="height: 100vh;" src="{% static 'main/img/home-amen-2.jpg' %}" alt="">
+    <section class="container-fluid mx-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
             </div>
             <div class="col-lg-6">
                 <div class="container text-center">
-                    <h1 class="display-4 text-uppercase mb-4">More Than 200 Luxury Residences</h1>
+                    <h2 class="display-4 text-uppercase mb-4">More Than 200 Luxury Residences</h2>
                     <p class="fs-4 about-text text-uppercase mb-0">Built to meet the very best design and quality
                         standards.</p>
                     <p class="fs-4 about-text text-uppercase mb-0">A new way to embrace space and connect with the
@@ -53,13 +57,12 @@
         </div>
     </section>
 
-    <section style="height: auto;">
+    <section class="container-fluid mx-0">
         <div class="row">
-            <div class="container text-center col-lg-9 mt-5">
-                <h1 class="display-4 text-uppercase mb-0">BE THE FIRST TO INVEST IN BENTLEYS INCREDIBLE NEW LUXURY
-                    RESIDENCES.</h1>
-                {#                <a href="{% url 'contact' %}"><button class="my-but text-uppercase">Contact us</button></a>#}
+            <div class="text-center container col-lg-9">
+                <h2 class="display-4 text-uppercase mb-0">LIFT TO EXCEPTINAL HEIGHTS WITH US!</h2>
             </div>
         </div>
     </section>
+
 {% endblock %}
