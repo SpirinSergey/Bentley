@@ -27,31 +27,25 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 1px solid #94c11d;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
+     style="border-bottom: 1px solid #94c11d;">
     <div class="container">
-        <a href="{% url 'index' %}" class="logo-svg me-auto me-lg-0">
-            <img style="height: 50px" src="{% static 'main/img/bentley_logo.png' %}" alt="">
+        <a href="{% url 'index' %}" class=" me-auto me-lg-0">
+            <img style="height: 90px" src="{% static 'main/img/logo_black.png' %}" alt="">
         </a>
         <button class="navbar-toggler btn-mobile-nav" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link {% block activ-home %}{% endblock %}" href="{% url 'index' %}">HOME</a>
-                </li>
-                <li class="nav-item"><a class="nav-link {% block activ-about %}{% endblock %}" href="{% url 'about' %}">ABOUT</a>
-                </li>
+                <li class="nav-item"><a class="nav-link {% block activ-home %}{% endblock %}"
+                                        href="{% url 'index' %}">HOME</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-about %}{% endblock %}"
+                                        href="{% url 'about' %}">ABOUT</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-amenities %}{% endblock %}"
+                                        href="{% url 'amenities' %}">AMENITIES</a></li>
                 <li class="nav-item"><a class="nav-link {% block activ-developers %}{% endblock %}"
                                         href="{% url 'developers' %}">DEVELOPERS</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle {% block activ-amenities %}{% endblock %}" id="navbarDropdown"
-                       href="#" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">AMENITIES</a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{% url 'inside' %}">indoor</a></li>
-                        <li><a class="dropdown-item" href="{% url 'outside' %}">outdoor</a></li>
-                    </ul>
-                </li>
                 <li class="nav-item"><a class="nav-link {% block activ-gallery %}{% endblock %}"
                                         href="{% url 'gallery' %}">GALLERY</a></li>
                 <li class="nav-item"><a class="nav-link {% block activ-listings %}{% endblock %}"
@@ -63,7 +57,8 @@
     </div>
 </nav>
 
-<main>
+
+<main style="margin-top: 105px">
     {% block content %}
     {% endblock %}
 </main>
@@ -72,10 +67,11 @@
     <div class="container text-center py-4 footer-contacts">
         <div class="row align-items-center">
             <div class="col-lg-6 my-2">
-                <p class="mb-1" style="padding: 2px 0; font-size: 17px;"><a href="tel:+1 (777) 777-7777"
-                                                                            class="my-font">+1 (777) 777-7777</a></p>
-                <p class="mb-0" style="padding: 2px 0; font-size: 17px;"><a href="mailto:info@bentley.com"
-                                                                            class="my-font ">test@bentley.com</a></p>
+                <p class="mb-1" style="padding: 2px 0; font-size: 17px;"><a href="tel:+1 (786) 254-5505"
+                                                                            class="my-font">+1 (786) 254-5505</a></p>
+                <p class="mb-0" style="padding: 2px 0; font-size: 17px;"><a href="mailto:info@residencesbentley.com"
+                                                                            class="my-font ">info@residencesbentley.com</a>
+                </p>
                 <div class="messengers-icons mt-2">
                     <p class="mb-0">
                         <a href="#" style="text-decoration: none; color: #335b4c;">
@@ -214,7 +210,7 @@
 
     <div class="footer-info">
         <div class="container text-center">
-            <p class="mb-3">© 2021 Bentley, INC</p>
+            <p class="mb-3">© 2022 Bentley Residences</p>
             <p class="mb-0"><a href="{% url 'privacy-policy' %}">Privacy Policy</a></p>
             <p class="mb-0"><a href="{% url 'disclaimer' %}">Legal Disclaimer</a></p>
         </div>

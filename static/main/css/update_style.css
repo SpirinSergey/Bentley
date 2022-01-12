@@ -1,22 +1,21 @@
-/*index*/
+section {
+    padding-bottom: 50px;
+}
 
+/*home*/
 .st-cl {
-    background-image:url('/static/main/img/home-11.jpg');
-    height: 92vh;
+    background-image: url('/static/main/img/home-11.jpg');
+    height: 105vh;
     background-size: cover;
-    background-position: center center;
+    background-position: left center;
 }
 
-.st-mn {
-    float: left;
-    margin-top: 17%
-}
 
 .image-style {
     width: 100%;
-    height: 100vh;
-    background-size: cover;
-    background-position: center center;
+    height: 129vh;
+    object-fit: cover;
+    background-position: bottom 50px right 100px;
 }
 
 .home-amen {
@@ -24,15 +23,15 @@
     height: auto;
 }
 
-@media only screen and (max-width : 768px) {
+@media only screen and (max-width: 768px) {
     .st-cl {
-        height: 60vh;
+        height: 80vh;
     }
+
     .image-style {
-        height: 60vh;
+        height: 70vh;
     }
 }
-
 
 .block-style {
     display: flex;
@@ -45,6 +44,8 @@
     width: 100%;
 }
 
+/*кнопки 2 ввида:*/
+/*залитая*/
 .my-but {
     background-color: #335b4c;
     border: 3px solid #335b4c;
@@ -72,6 +73,7 @@
     color: #335b4c;
 }
 
+/*незалитая*/
 .my-but-2 {
     background-color: #ffffff;
     border: 2px solid #335b4c;
@@ -84,7 +86,6 @@
     margin: 4px 2px;
     cursor: pointer;
 }
-
 
 .my-but-2:hover {
     border: 2px solid #00311e;
@@ -100,7 +101,6 @@
 }
 
 /*иконки*/
-
 .whatsapp:hover, .facebook:hover,
 .instagram:hover, .telegram:hover {
     fill: #00311e;
@@ -113,9 +113,6 @@
     width: auto;
 }
 
-
-
-
 .myfooter {
     background-color: #212529;
     color: #ffffff;
@@ -123,10 +120,6 @@
     padding: 2px;
     height: 50px;
     margin-bottom: 0;
-}
-
-.navtext {
-    font-size: 15px;
 }
 
 .mygallery {
@@ -140,29 +133,7 @@
     margin-left: 10px;
 }
 
-.my-video {
-    height: 600px;
-    width: 100%;
-}
-
-.about-block-3 {
-    margin-top: 50px;
-    height: 650px;
-    width: 100%;
-
-}
-
-.heading-style {
-    margin-top: 90px;
-    padding: 0;
-    height: 350px;
-}
-
-.amenities-1-block {
-    width: 35%;
-}
-
-
+/*плавное появление элементов*/
 .element-animation {
     margin: 2rem 0;
     font-size: 3rem;
@@ -177,8 +148,23 @@
     transform: translateY(0%);
 }
 
-section {
-    padding-bottom: 55px;
+/*карусель HOME*/
+.kar-1 {
+    display: block;
+}
+
+.kar-2 {
+    display: none;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .kar-1 {
+        display: none;
+    }
+    .kar-2 {
+        display: block;
+    }
 }
 
 

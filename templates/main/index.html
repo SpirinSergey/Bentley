@@ -7,129 +7,151 @@
 {% block content %}
     <section class="container-fluid st-cl">
         <div class="row">
-            <div class="col-lg-7"></div>
-            <div class="col-lg-5 st-mn">
-                <div class="container">
-                <h1 class="display-5 text-uppercase mb-3">LIFT TO EXTRAORDINARY HEIGHTS.</h1>
-                <p class="fs-4 mb-3" style="color: #333333;">Introducing the Bentley Residences - the first
-                    residential offering by one of the world’s most revered brands.</p>
-                <p class="fs-4 mb-3" style="color: #333333;">COMING 2026</p>
-                <a href="{% url 'about' %}">
-                    <button class="my-but">STAY INFORMED</button>
-                </a>
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6" style="margin-top: 20%">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-5 text-uppercase mb-5">EXCEPTIONAL HEIGHTS WITH BENTLEY</h1>
+                    <p class="fs-3 mb-5" style="color: #333333;">Sales of residences of the world's first skyscraper
+                        under the
+                        company's brand have started in Miami.</p>
+                    <a href="{% url 'contact' %}">
+                        <button class="my-but">STAY INFORMED</button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container-fluid mx-0">
+    <section class="container-fluid mx-0" style="padding-bottom: 25px; margin-top: 25px">
         <div class="row">
             <div class="text-center container" style="background-color: #e6eae9; height: auto;">
                 <div class="container">
                     <div class=" mt-5 mb-5">
-                        <h4 class="display-5 my-font-h">The World’s First Bentley-Branded Luxury Residential</h4>
+                        <h4 class="display-5 text-uppercase my-font-h">scheduled to be completed in 2026</h4>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container-fluid mx-0">
-        <div class="row">
-            <div class="text-center container col-lg-8">
-                <h4 class="fs-2">Standing at 749 feet and over 60 stories high, Bentley Residences will be the tallest
-                    residential tower on a U.S. beachfront.</h4>
-            </div>
-        </div>
-    </section>
-
 
     <section class="container-fluid mx-0" style="padding-bottom: 0;">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="container text-center">
-                    <h2 class="display-4 text-uppercase mb-4">Bentley Residences</h2>
-                    <p class="fs-4 about-text text-uppercase mb-0">Introducing the Tallest Beachfront Luxury Tower in
-                        the U.S.</p>
-                </div>
-            </div>
-            <div class="col-lg-6 px-0">
-                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
-            </div>
-        </div>
-    </section>
-
-    <section class="container-fluid mx-0">
-        <div class="row align-items-center">
-            <div class="col-lg-6 px-0">
-                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
-            </div>
-            <div class="col-lg-6">
-                <div class="container text-center">
-                    <h2 class="display-4 text-uppercase mb-4">An Imposing Sight At Miami's Sunny Isles Beach
-                        Coastline</h2>
-                    <p class="fs-4 about-text text-uppercase mb-3">An incredible location. Featuring unique ocean and
-                        bayside views from every apartment, bringing the beauty of the outdoors into each new home.</p>
+                    <h2 class="display-4 text-uppercase mb-3">about</h2>
+                    <p class="fs-4 about-text text-uppercase mb-3">The Bentley Residences - the cylindrical 230 meters
+                        height tower - is considered to
+                        be the tallest residential building on the coast of the USA, scheduled to be completed in
+                        2026.</p>
                     <a href="{% url 'about' %}">
-                        <button class="my-but text-uppercase">Learn more</button>
+                        <button class="my-but text-uppercase mb-3">Learn more</button>
                     </a>
                 </div>
             </div>
+            <div class="col-lg-6 px-0">
+                <img class="image-style" src="{% static 'main/img/home-2.jpg' %}" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="container-fluid mx-0">
+        <div class="row align-items-center">
+            <div class="col-lg-6 px-0 kar-1">
+                <img class="image-style " src="{% static 'main/img/home-3.jpg' %}" alt="">
+            </div>
+            <div class="col-lg-6">
+                <div class="container text-center mt-3">
+                    <h2 class="display-4 text-uppercase mb-3">Amenities</h2>
+                    <p class="fs-4 about-text text-uppercase mb-3">The residents of the luxury tower are able to get
+                        into their apartments without leaving their cars.</p>
+                    <div class="text-center">
+                        <a href="{% url 'amenities' %}" class="fs-5 double-border-button">
+                            <button class="my-but text-uppercase">Learn more</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="container-fluid mx-0" style="padding-bottom: 0;">
-        <div class="row">
-            <div class="text-center">
-                <h1 class="display-5 text-uppercase mb-3">Amenities</h1>
-                <p class="fs-4 about-text text-uppercase">We have prepared all possible amenities for your pleasure.</p>
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="container text-center">
+                    <h1 class="display-5 text-uppercase mb-3">Developers</h1>
+                    <p class="fs-4 about-text text-uppercase">Bentley's partners in this project are the American
+                        developer
+                        Dezer Development and the architectural bureau Sieger Suarez Architects.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="container-fluid" style="padding-bottom: 20px;">
+    <section class="container-fluid kar-1" style="padding-bottom: 20px;">
         <div class="row">
-            <div class="col-lg-3 px-0">
+            <div class="col-6 col-lg-3 px-0">
                 <img class="home-amen" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
             </div>
-            <div class="col-lg-3 px-0">
+            <div class="col-6 col-lg-3 px-0">
                 <img class="home-amen" src="{% static 'main/img/home-amen-2.jpg' %}" alt="">
             </div>
-            <div class="col-lg-3 px-0">
+            <div class="col-6 col-lg-3 px-0">
                 <img class="home-amen" src="{% static 'main/img/home-amen-3.jpg' %}" alt="">
             </div>
-            <div class="col-lg-3 px-0">
+            <div class="col-6 col-lg-3 px-0">
                 <img class="home-amen" src="{% static 'main/img/home-amen-4.jpg' %}" alt="">
             </div>
         </div>
     </section>
 
+    <section id="carouselExampleFade" class="container-fluid kar-2 carousel slide carousel-fade"  data-bs-ride="carousel" style="padding-bottom: 20px;">
+        <div class="row carousel-inner mx-0">
+            <div class="col-md-6 col-lg-3 px-0 carousel-item active">
+                <img class="home-amen" src="{% static 'main/img/home-amen-1.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6 col-lg-3 px-0 carousel-item">
+                <img class="home-amen" src="{% static 'main/img/home-amen-2.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6 col-lg-3 px-0 carousel-item">
+                <img class="home-amen" src="{% static 'main/img/home-amen-3.jpg' %}" alt="">
+            </div>
+            <div class="col-md-6 col-lg-3 px-0 carousel-item">
+                <img class="home-amen" src="{% static 'main/img/home-amen-4.jpg' %}" alt="">
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Предыдущий</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"  data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+  </button>
+        </div>
+    </section>
+
     <section class="container-fluid">
         <div class="text-center">
-            <a href="{% url 'inside' %}" class="fs-5 double-border-button" style="text-decoration: none">
-                <button class="my-but text-uppercase">Inside</button>
-            </a>
-            <a href="{% url 'outside' %}" class="fs-5 double-border-button">
-                <button class="my-but-2 text-uppercase">Outside</button>
+            <a href="{% url 'developers' %}" class="fs-5 double-border-button" style="text-decoration: none">
+                <button class="my-but text-uppercase">learn more</button>
             </a>
         </div>
     </section>
 
-
     <section class="container-fluid mx-0">
         <div class="row align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <div class="container text-center mb-3">
-                    <h1 class="display-4 text-uppercase mb-4">Inspiring, Powerful, And Iconic.</h1>
-                    <p class="fs-4 about-text text-uppercase mb-3">A true game-changer, combining luxury living and a
-                        sustainable environment.</p>
+                    <h1 class="display-4 text-uppercase mb-3">Bentley Residences</h1>
+                    <p class="fs-4 about-text text-uppercase mb-3">A private garage, available for each
+                        apartment, is located on the same floor.</p>
                     <a href="{% url 'listings' %}">
                         <button class="my-but text-uppercase">Show Listings</button>
                     </a>
                 </div>
             </div>
-            <div class="col-lg-6 px-0">
-                <img class="image-style" src="{% static 'main/img/home-1.jpg' %}" alt="">
+            <div class="col-lg-5 px-0">
+                <img class="image-style" src="{% static 'main/img/home-4.jpg' %}" alt="">
             </div>
         </div>
     </section>

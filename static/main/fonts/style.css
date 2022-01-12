@@ -10,16 +10,14 @@ url('Bentley-Light.woff2') format('woff2'), font-style: normal;
     font-weight: normal;
 }
 
-h1, h2, h3, h4, a {
-    font-family: "Bentley Residence Bold", sans-serif;
-!important;
+h1, h2, h3, h4, a, select, option {
+    font-family: "Bentley Residence Bold", sans-serif;!important;
     color: #333333;
     /*color: #00311e;*/
 }
 
-p {
-    font-family: "Bentley Residence Light", sans-serif;
-!important;
+p, ul, li {
+    font-family: "Bentley Residence Light", sans-serif;!important;
     color: #727376;
     /*color: #335b4c;*/
 }
@@ -28,14 +26,9 @@ p {
     color: #00311e;
 }
 
-.my-font-p {
-    color: #335b4c;
-}
-
-
+/*ссылки и кнопки*/
 .my-font {
-    font-family: "Bentley Residence Light", sans-serif;
-!important;
+    font-family: "Bentley Residence Light", sans-serif;!important;
     color: #335b4c;
 }
 
@@ -45,4 +38,17 @@ p {
 
 .my-font:active {
     color: #335b4c;
+}
+
+/*contacts*/
+.my-font-contact {
+    color: #727376;
+}
+
+.my-font-contact:hover {
+    color: #333333;
+}
+
+.my-font-contact:active {
+    color: #727376;
 }
