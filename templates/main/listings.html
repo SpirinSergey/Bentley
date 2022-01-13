@@ -8,8 +8,18 @@
     <div class="page-content my-font">
         <div class="container mb-5">
             <h2 class="display-4 mb-3 text-uppercase">Listings</h2>
-            <span class="btn rounded-0 btn-lg my-but-2" data-bs-toggle="modal"
-                  data-bs-target="#exampleModalSpecialApp">Special opportunities</span>
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <span class="btn rounded-0 btn-lg my-but-2 text-uppercase mb-3" data-bs-toggle="modal"
+                          data-bs-target="#exampleModalSpecialApp"
+                          style="margin: 15px 2px;">Special opportunities</span>
+                </div>
+                <div class="col-lg-3">
+                    <a class="my-but text-uppercase" style="cursor:pointer;" data-bs-toggle="modal"
+                       data-bs-target="#exampleModal1">BOOK NOW</a>
+                </div>
+            </div>
+
         </div>
         <div class="container my-font">
             <form method="get" class="form-listings-search mb-3">
@@ -59,7 +69,8 @@
                         </button>
                     </div>
                     <div class="col-lg-2">
-                        <a href="{% url 'listings' %}" class="btn my-but-2 btn-list-search w-100" style=" margin-top: -2px">Reset search</a>
+                        <a href="{% url 'listings' %}" class="btn my-but-2 btn-list-search w-100"
+                           style=" margin-top: -2px">Reset search</a>
                     </div>
                 </div>
             </form>

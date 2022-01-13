@@ -10,13 +10,13 @@ url('Bentley-Light.woff2') format('woff2'), font-style: normal;
     font-weight: normal;
 }
 
-h1, h2, h3, h4, a, select, option {
+h1, h2, h3, h4, h5, a, select, option {
     font-family: "Bentley Residence Bold", sans-serif;!important;
     color: #333333;
     /*color: #00311e;*/
 }
 
-p, ul, li {
+p, ul, li, input {
     font-family: "Bentley Residence Light", sans-serif;!important;
     color: #727376;
     /*color: #335b4c;*/

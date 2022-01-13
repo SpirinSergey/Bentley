@@ -26,20 +26,21 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="border-bottom: 1px solid #94c11d;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
+     style="border-bottom: 1px solid #94c11d;">
     <div class="container">
-        <a href="{% url 'index' %}" class="logo-svg me-auto me-lg-0">
-            <img style="height: 50px" src="{% static 'main/img/bentley_logo.png' %}" alt="">
+        <a href="{% url 'index' %}" class=" me-auto me-lg-0">
+            <img style="height: 90px" src="{% static 'main/img/logo_black.png' %}" alt="">
         </a>
         <button class="navbar-toggler btn-mobile-nav" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link {% block activ-home %}{% endblock %}" href="{% url 'index' %}">HOME</a>
-                </li>
-                <li class="nav-item"><a class="nav-link {% block activ-about %}{% endblock %}" href="{% url 'about' %}">ABOUT</a>
-                </li>
+                <li class="nav-item"><a class="nav-link {% block activ-home %}{% endblock %}"
+                                        href="{% url 'index' %}">HOME</a></li>
+                <li class="nav-item"><a class="nav-link {% block activ-about %}{% endblock %}"
+                                        href="{% url 'about' %}">ABOUT</a></li>
                 <li class="nav-item"><a class="nav-link {% block activ-amenities %}{% endblock %}"
                                         href="{% url 'amenities' %}">AMENITIES</a></li>
                 <li class="nav-item"><a class="nav-link {% block activ-developers %}{% endblock %}"
