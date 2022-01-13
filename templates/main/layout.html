@@ -27,6 +27,28 @@
 </head>
 
 <body>
+
+    {% if messages %}
+    <div class="modal" tabindex="-1" id="messagesuccess">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title">Successful</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% for message in messages %}
+                    {{ message|safe }}
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark btn-lg rounded-0" data-bs-dismiss="modal">Okey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
      style="border-bottom: 1px solid #94c11d;">
     <div class="container">

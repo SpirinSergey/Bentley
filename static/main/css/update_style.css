@@ -1,5 +1,5 @@
 section {
-    padding-bottom: 50px;
+     margin-bottom: 50px;
 }
 
 .pb-20 {
@@ -194,6 +194,11 @@ section {
     background-color: white;
     border: 3px solid #335b4c;
     color: #335b4c;
+}
+
+/*кнопка 2 блока HOME*/
+.home-2 {
+    background-color: #e6eae9;;
 }
 
 /*иконки*/

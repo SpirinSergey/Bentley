@@ -105,6 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
 EMAIL_HOST = 'smtp.timeweb.ru'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = "info@residencesbentley.com"
