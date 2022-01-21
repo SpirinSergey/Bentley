@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.shortcuts import render
-from .models import Gallery
-from .models import Listing
+from main.models import Gallery
+from main.models import Listing
 from django.db.models import Q
-from django.http import HttpResponse
 
 
 def index(request):

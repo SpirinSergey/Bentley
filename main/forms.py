@@ -1,5 +1,5 @@
 from django import forms
-from .models import FeedBack, BookPoint
+from main.models import FeedBack, BookPoint
 
 
 class ContactForm(forms.ModelForm):

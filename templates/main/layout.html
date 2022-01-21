@@ -1,53 +1,27 @@
 {% load static %}
 
-{# Load the tag library #}
-{% load django_bootstrap5 %}
-
-{# Load CSS and JavaScript #}
-{% bootstrap_css %}
-{% bootstrap_javascript %}
-
-{# Display django.contrib.messages as Bootstrap alerts #}
-{% bootstrap_messages %}
-
-
 <head>
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="{% static "main/img/favicon.ico" %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'main/img/favicon.ico' %}">
 
     <link rel="stylesheet" href="{% static 'main/css/update_style.css' %}">
 
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'main/css/phone-code.css' %}">
     <link rel="stylesheet" href="{% static 'main/css/theme.css' %}">
 
     <link rel="stylesheet" href="{% static 'main/fonts/style.css' %}">
+
+    <!-- For datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 
 <body>
-
-    {% if messages %}
-    <div class="modal" tabindex="-1" id="messagesuccess">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-0">
-                <div class="modal-header">
-                    <h5 class="modal-title">Successful</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    {% for message in messages %}
-                    {{ message|safe }}
-                    {% endfor %}
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dark btn-lg rounded-0" data-bs-dismiss="modal">Okey</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endif %}
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow"
      style="border-bottom: 1px solid #94c11d;">
@@ -86,7 +60,7 @@
 </main>
 
 <footer class="" style="background-color: #e6eae9">
-    <div class="container text-center py-4 footer-contacts">
+    <div class="container text-center py-4 footer-contacts {% block foo %}{% endblock %}">
         <div class="row align-items-center">
             <div class="col-lg-6 my-2">
                 <p class="mb-1" style="padding: 2px 0; font-size: 17px;"><a href="tel:+1 (786) 254-5505"
@@ -154,25 +128,35 @@
                             <div class="form-floating mb-1">
                                 <div id="div_id_first_name">
                                     <input type="text" name="first_name" id="id_first_name" class="form-control"
-                                                                        placeholder="First name" required>
+                                           placeholder="First name" required>
                                 </div>
                             </div>
                             <div class="form-floating mb-1">
                                 <div id="div_id_last_name">
                                     <input type="text" name="last_name" id="id_last_name" class="form-control"
-                                                                        placeholder="Last name" required>
+                                           placeholder="Last name" required>
                                 </div>
                             </div>
                             <div class="form-floating mb-1">
                                 <div id="div_id_phone">
-                                   <input type="text" name="phone" id="id_phone" class="form-control phone"
-                                                                         placeholder="Your Phone" required>
+                                    <input type="text" name="phone" id="id_phone" class="form-control phone"
+                                           placeholder="Your Phone" required>
                                 </div>
                             </div>
                             <div class="form-floating">
                                 <div id="div_id_email">
                                     <input type="text" id="id_email" name="email" class="form-control"
                                            placeholder="Your email" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-1">
+                                <div id="">
+                                    <select class="form-select my-sel" name="agent_type"
+                                            aria-label="Default select example" required>
+                                        <option class="my-sel" selected>Are you a realtor?</option>
+                                        <option class="my-sel" value="yes">Yes</option>
+                                        <option class="my-sel" value="no">No</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -200,13 +184,13 @@
                             <div class="form-floating mb-1">
                                 <div id="div_id_first_name">
                                     <input type="text" name="first_name" id="id_first_name" class="form-control"
-                                                                        placeholder="First name" required>
+                                           placeholder="First name" required>
                                 </div>
                             </div>
                             <div class="form-floating mb-1">
                                 <div id="div_id_last_name">
                                     <input type="text" name="last_name" id="id_last_name" class="form-control"
-                                                                        placeholder="Last name" required>
+                                           placeholder="Last name" required>
                                 </div>
                             </div>
                             <div class="form-floating mb-1">
@@ -220,6 +204,16 @@
                                 <div id="div_id_email">
                                     <input type="text" id="id_email" name="email" class="form-control rounded-0"
                                            placeholder="Your email" required>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-1">
+                                <div id="">
+                                    <select class="form-select my-sel" name="agent_type"
+                                            aria-label="Default select example" required>
+                                        <option class="my-sel" selected>Are you a realtor?</option>
+                                        <option class="my-sel" value="yes">Yes</option>
+                                        <option class="my-sel" value="no">No</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col">
@@ -242,6 +236,53 @@
         </div>
     </div>
 
+    <!-- Modal popup -->
+    <div class="modal fade" id="modalcrypto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="max-width: 750px;">
+            <div class="modal-content rounded-0">
+                <div class="modal-body text-center p-0">
+                    <div class="row ">
+                        <div class="col-lg-6 col-img">
+                            <img style="height: 50vh; width: 100%; object-fit: cover;"
+                                 src="{% static '/main/img/popup.jpg' %}" alt="">
+                        </div>
+                        <div class="col-lg-6 px-4 col-info">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12 text-center">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="col-lg-12 align-items-center">
+                                    <p class="fs-5 text-center fw-bolder">YOU CAN OWN A RESIDENCE NOW</p>
+                                    <h5 class="fw-bolder text-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                             fill="currentColor"
+                                             class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                                        </svg>
+                                        Call:
+                                    </h5>
+                                    <p class=" " style="font-size: 16px; ">
+                                        <a class="my-font text-center" href="tel:+1 (786) 254-5505">+1 (786)
+                                            254-5505</a>
+                                    </p>
+                                    <button type="button" class="my-but text-uppercase mt-1" style="cursor:pointer;"
+                                            data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal1" data-bs-dismiss="modal"
+                                            aria-label="Close">
+                                        Request more info
+                                    </button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="footer-info">
         <div class="container text-center">
             <p class="mb-3">© 2022 Bentley Residences</p>
@@ -251,8 +292,50 @@
     </div>
 </footer>
 
-<link rel="stylesheet" href="{% static 'main/js/vendor.bundle.js' %}">
-<link rel="stylesheet" href="{% static 'main/js/index.bundle.js' %}">
+{% if messages %}
+    <div class="modal" tabindex="-1" id="messagesuccess">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title">Successful</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    {% for message in messages %}
+                        {{ message|safe }}
+                    {% endfor %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark btn-lg rounded-0" data-bs-dismiss="modal">Okey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endif %}
+<script src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://yastatic.net/jquery/cookie/1.0/jquery.cookie.min.js"></script>
+
+<script>
+    $(function () {
+        if (!$.cookie('hideModal')) {
+            // если cookie не установлено появится окно
+            var delay_popup = 3000;
+            $(window).on('load', function () {
+                $('#modalcrypto').modal('show');
+            });
+        }
+        // Запоминаем в куках, что посетитель уже заходил
+        $.cookie('hideModal', true, {
+            // Время хранения cookie в днях
+            expires: 3,
+            path: '/'
+        });
+    });
+</script>
+
+<script src="{% static 'main/js/vendor.bundle.js' %}"></script>
+<script src="{% static 'main/js/index.bundle.js' %}"></script>
+<script src="{% static 'main/js/phone-code.js' %}"></script>
 
 <script>
     $(window).on('load', function () {
@@ -260,6 +343,5 @@
     });
 </script>
 
-<script src="{% static 'main/js/phone-code.js' %}"></script>
 
 </body>

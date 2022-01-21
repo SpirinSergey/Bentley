@@ -18,8 +18,14 @@ class Listing(models.Model):
 
 
 class FeedBack(models.Model):
+    user_type_choices = (
+        ('yes', 'Yes'),
+        ('no', 'No'),
+    )
+
     first_name = models.CharField(max_length=150, blank=True, verbose_name='First name')
     last_name = models.CharField(max_length=150, blank=True, verbose_name='Last name')
+    agent_type = models.CharField(max_length=150,  blank=True, choices=user_type_choices, verbose_name='Is a realtor')
     phone = models.CharField(max_length=150, blank=True, verbose_name='Phone')
     email = models.EmailField(blank=True, verbose_name='Email')
     date_creation = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Date creation')

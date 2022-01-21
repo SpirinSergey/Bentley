@@ -2,10 +2,6 @@ section {
      margin-bottom: 50px;
 }
 
-.pb-20 {
-    padding-bottom: 25px;
-}
-
 /*первое изображение на HOME*/
 .st-cl {
     background-image: url('/static/main/img/home-11.jpg');
@@ -25,8 +21,6 @@ section {
 .gray-stripe {
     background-color: #e6eae9;
     height: auto;
-    margin-bottom: 25px;
-    margin-top: 25px;
 }
 
 /*4 картинки в ряд*/
@@ -70,6 +64,9 @@ section {
 }
 
 @media only screen and (max-width: 850px) {
+    .my-mt-50 {
+        margin-top: 50px;
+    }
     .st-cl {
         background-position: 16% center;
     }
@@ -252,6 +249,10 @@ section {
     transform: translateY(0%);
 }
 
+
+.my-none {
+    display: none;
+}
 
 
 

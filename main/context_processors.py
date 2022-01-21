@@ -2,7 +2,7 @@ from django.conf import settings
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.contrib import messages
-from .models import FeedBack, BookPoint
+from main.models import FeedBack, BookPoint
 from .forms import ContactForm, BookPointForm
 
 
@@ -27,7 +27,7 @@ def contacts_forms(request):
             }
             message_request = render_to_string('main/emails/contact_form.html', context=context)
             message_success = render_to_string('main/emails/message_success.html', context=context)
-            send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['sergeys.verarealty@gmail.com'], fail_silently=False, html_message=message_request)
+            send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['spirin1504@mail.ru'], fail_silently=False, html_message=message_request)
             # send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['FuntekAnita@gmail.com', 'evgenia.verarealty@gmail.com', 'npolyushkin@gmail.com'], fail_silently=False, html_message=message_request)
             send_mail(subject_success, message_success, settings.EMAIL_HOST_USER, [contact_form.cleaned_data["email"]], fail_silently=False, html_message=message_success)
 
@@ -52,7 +52,7 @@ def contacts_forms(request):
             }
             message_request = render_to_string('main/emails/bookpoint_form.html', context=context)
             message_success = render_to_string('main/emails/message_success.html', context=context)
-            send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['sergeys.verarealty@gmail.com'], fail_silently=False, html_message=message_request)
+            send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['spirin1504@mail.ru'], fail_silently=False, html_message=message_request)
             # send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['FuntekAnita@gmail.com', 'evgenia.verarealty@gmail.com', 'npolyushkin@gmail.com'], fail_silently=False, html_message=message_request)
             send_mail(subject_success, message_success, settings.EMAIL_HOST_USER, [bookpoint_form.cleaned_data["email"]], fail_silently=False, html_message=message_success)
 
