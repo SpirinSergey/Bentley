@@ -25,9 +25,9 @@ class FeedBack(models.Model):
 
     first_name = models.CharField(max_length=150, blank=True, verbose_name='First name')
     last_name = models.CharField(max_length=150, blank=True, verbose_name='Last name')
-    agent_type = models.CharField(max_length=150,  blank=True, choices=user_type_choices, verbose_name='Is a realtor')
     phone = models.CharField(max_length=150, blank=True, verbose_name='Phone')
     email = models.EmailField(blank=True, verbose_name='Email')
+    agent_type = models.CharField(max_length=150,  blank=True, choices=user_type_choices, verbose_name='Is a realtor')
     date_creation = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Date creation')
 
     def __str__(self):
@@ -54,11 +54,17 @@ class BookPoint(models.Model):
         ('20:00', '20:00'),
     )
 
+    user_type_choices = (
+        ('yes', 'Yes'),
+        ('no', 'No'),
+    )
+
     first_name = models.CharField(max_length=150, blank=True, verbose_name='First name')
     last_name = models.CharField(max_length=150, blank=True, verbose_name='Last name')
     phone = models.CharField(max_length=150, blank=True, verbose_name='Phone')
     email = models.EmailField(blank=True, verbose_name='Email')
     date = models.CharField(max_length=50, blank=True, verbose_name='Date and time')
+    agent_type = models.CharField(max_length=150,  blank=True, choices=user_type_choices, verbose_name='Is a realtor')
     date_creation = models.DateTimeField(auto_now_add=True, blank=True, null=True, verbose_name='Date creation')
 
     def __str__(self):

@@ -24,6 +24,7 @@ def contacts_forms(request):
                 'user_last_name': contact_form.cleaned_data["last_name"],
                 'user_phone': contact_form.cleaned_data["phone"],
                 'user_email': contact_form.cleaned_data["email"],
+                'user_agent_type': contact_form.cleaned_data["agent_type"],
             }
             message_request = render_to_string('main/emails/contact_form.html', context=context)
             message_success = render_to_string('main/emails/message_success.html', context=context)
@@ -48,6 +49,7 @@ def contacts_forms(request):
                 'user_last_name': contact_form.cleaned_data["last_name"],
                 'user_phone': bookpoint_form.cleaned_data["phone"],
                 'user_email': bookpoint_form.cleaned_data["email"],
+                'user_agent_type': contact_form.cleaned_data["agent_type"],
                 'user_date_time': bookpoint_form.cleaned_data["date"],
             }
             message_request = render_to_string('main/emails/bookpoint_form.html', context=context)
@@ -56,7 +58,7 @@ def contacts_forms(request):
             # send_mail(subject, message_request, settings.EMAIL_HOST_USER, ['FuntekAnita@gmail.com', 'evgenia.verarealty@gmail.com', 'npolyushkin@gmail.com'], fail_silently=False, html_message=message_request)
             send_mail(subject_success, message_success, settings.EMAIL_HOST_USER, [bookpoint_form.cleaned_data["email"]], fail_silently=False, html_message=message_success)
 
-            messages.success(request, 'Thank you for your request! We will shortly contact you.')
+            messages.success(request, 'Thank you for your request! We will contact you shortly.')
     else:
         contact_form = ContactForm()
         bookpoint_form = BookPointForm()
